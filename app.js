@@ -51,6 +51,16 @@ app.patch('/pets/:id', async (req, res) => {
 // Inicialização do Servidor
 const PORT = process.env.PORT || 3000;
 sequelize.sync().then(() => {
+  // Rota para cadastrar via navegador para teste rápido
+app.get('/teste-cadastro', async (req, res) => {
+  const novoPet = await Pet.create({
+    name: "Rex",
+    species: "Cão",
+    healthInfo: "Aguardando castração",
+    rescueLocation: "Praça da Etapa B - Valparaíso 1"
+  });
+  res.send(`<h1>🐾 Pet Cadastrado!</h1><p>O cão ${novoPet.name} foi salvo no sistema.</p><a href="/pets">Ver lista de animais</a>`);
+});
   app.listen(PORT, () => {
     console.log(`🐾 Sistema PetCare Online na porta ${PORT}`);
   });
