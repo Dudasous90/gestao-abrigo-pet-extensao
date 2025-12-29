@@ -6,7 +6,7 @@ Este sistema foi desenvolvido para a atividade extensionista da faculdade, focad
 O abandono de animais domésticos impacta o equilíbrio da fauna silvestre e a saúde do solo. Este sistema auxilia no controle sanitário e populacional, protegendo o ecossistema local.
 
 ## Tecnologias Utilizadas
-- Node.js
+- Replic
 - Express (API REST)
 - Sequelize & SQLite (Banco de dados)
 
